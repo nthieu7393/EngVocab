@@ -64,19 +64,19 @@ platform :ios do
   )
  end
 
- decs "Create keychain"
- lane :create_keychain do
-  xcversion(version: "~>12.3")
-  xcode_select "/Applications/Xcode_14_2.app"
-  create_keychain(
-    name: "EngVocab_test",
-    password: "12345",
-    default_keychain: true,
-    unlock: true,
-    timeout: 3600,
-    lock_when_sleeps: false
-  )
- end
+#  decs "Create keychain"
+#  lane :create_keychain do
+#   xcversion(version: "~>12.3")
+#   xcode_select "/Applications/Xcode_14_2.app"
+#   create_keychain(
+#     name: "EngVocab_test",
+#     password: "12345",
+#     default_keychain: true,
+#     unlock: true,
+#     timeout: 3600,
+#     lock_when_sleeps: false
+#   )
+#  end
 
  desc "Build the iOS app for release"
  lane :build_release do |options|
