@@ -22,7 +22,10 @@ platform :ios do
     api_key = app_store_connect_api_key(
       key_id: "T2TM8TLBCV",
       issuer_id: "3bfff8be-a470-48b5-9d2f-7ed90a062e21",
-      key_filepath: "./AuthKey_T2TM8TLBCV.p8",
+      key_content: "Base64_encode_of_-----BEGIN EC PRIVATE KEY-----\nMIGTAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBHkwdwIBAQQgI9SGsuowbPTkFh+t
+WONYbXOIrweLkpJWOK5y5O+X1yKgCgYIKoZIzj0DAQehRANCAAT1l0+uQoM9YyOj
+mG2yhKkp0ad1FULnh/Dho7oq/xy3CAC2Ukqa6XQ/Yz9KXDMraBV6wtLJehz4A1WA
++wCeKzMU\n-----END EC PRIVATE KEY-----",
       duration: 1200, # optional (maximum 1200)
       in_house: false # optional but may be required if using match/sigh
     )
@@ -37,7 +40,10 @@ platform :ios do
     api_key = app_store_connect_api_key(
       key_id: "T2TM8TLBCV",
       issuer_id: "3bfff8be-a470-48b5-9d2f-7ed90a062e21",
-      key_filepath: "./AuthKey_T2TM8TLBCV.p8",
+      key_content: "Base64_encode_of_-----BEGIN EC PRIVATE KEY-----\nMIGTAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBHkwdwIBAQQgI9SGsuowbPTkFh+t
+WONYbXOIrweLkpJWOK5y5O+X1yKgCgYIKoZIzj0DAQehRANCAAT1l0+uQoM9YyOj
+mG2yhKkp0ad1FULnh/Dho7oq/xy3CAC2Ukqa6XQ/Yz9KXDMraBV6wtLJehz4A1WA
++wCeKzMU\n-----END EC PRIVATE KEY-----",
       duration: 1200, # optional (maximum 1200)
       in_house: false # optional but may be required if using match/sigh
     )
