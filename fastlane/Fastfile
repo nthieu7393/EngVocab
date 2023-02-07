@@ -13,9 +13,6 @@
 # Uncomment the line if you want fastlane to automatically update itself
 # update_fastlane
 
-app_identifier("com.hieunguyen.eng.vocab")
-
-
 platform :ios do
  desc "Load ASC API Key information to use in subsequent lanes"
  lane :load_asc_api_key do
