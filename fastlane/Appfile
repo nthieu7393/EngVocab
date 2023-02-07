@@ -2,3 +2,4 @@ app_identifier("com.hieunguyen.eng.vocab")
 apple_id("itune.hasam@gmail.com")
 itc_team_name("hieu nguyen")
 team_id("TR3J5S5CGX")
+ENV['FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD']= 'eqmy-izsr-famb-agvb'
