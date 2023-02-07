@@ -56,9 +56,9 @@ jobs:
     # 5
     - uses: actions/checkout@v2
 
-#    - name: Pod install
-#      run: |
-#        pod install
+    - name: Pod install
+      run: |
+        pod install
 
     # 6
     - name: Install fastlane
