@@ -11,11 +11,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Set up ruby env
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 2.7.2
-          bundler-cache: true
+      - name: Install fastlane
+      run: |
+        bundle install
 
       - name: Import Code-Signing Certificates
         uses: Apple-Actions/import-codesign-certs@v1
