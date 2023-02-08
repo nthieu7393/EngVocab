@@ -118,7 +118,7 @@ platform :ios do
   )
  end
 
- decs 'Create keychain'
+ desc 'Create keychain'
  lane :create_keychain do
   xcversion(version: '~>12.3')
   xcode_select '/Applications/Xcode_14_2.app'
