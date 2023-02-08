@@ -34,12 +34,12 @@ platform :ios do
   #   app_identifier: ios_bundle_ids
   # })
 
-  # # 6
-  # match({
-  #   readonly: false,
-  #   app_identifier: ios_bundle_ids,
-  #   platform: 'ios'
-  # })
+  # 6
+  match({
+    readonly: false,
+    app_identifier: ios_bundle_ids,
+    platform: 'ios'
+  })
  end
 
 #  before_all do 
