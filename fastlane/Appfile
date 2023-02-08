@@ -5,4 +5,6 @@
 # For more information about the Appfile, see:
 #     https://docs.fastlane.tools/advanced/#appfile
 
-app_identifier("com.hieunguyen.eng.vocab")
+app_identifier "com.hieunguyen.eng.vocab"
+apple_id "itune.hasam@gmail.com"
+team_id "TR3J5S5CGX"
