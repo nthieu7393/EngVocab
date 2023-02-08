@@ -28,11 +28,11 @@ platform :ios do
   ]
 
   # 5
-  match_nuke({
-    type: "appstore",
-    readonly: false,
-    app_identifier: ios_bundle_ids
-  })
+  # match_nuke({
+  #   type: "appstore",
+  #   readonly: false,
+  #   app_identifier: ios_bundle_ids
+  # })
 
   # # 6
   # match({
