@@ -13,33 +13,33 @@ platform :ios do
   )
 
   # 3
-  create_keychain({
-    name: ENV["MATCH_KEYCHAIN_NAME"],
-    password: ENV["MATCH_KEYCHAIN_PASSWORD"],
-    default_keychain: true,
-    lock_when_sleeps: true,
-    unlock: true
-  })
+  # create_keychain({
+  #   name: ENV["MATCH_KEYCHAIN_NAME"],
+  #   password: ENV["MATCH_KEYCHAIN_PASSWORD"],
+  #   default_keychain: true,
+  #   lock_when_sleeps: true,
+  #   unlock: true
+  # })
 
-  # 4
-  ios_bundle_ids = [
-    'com.hieunguyen.eng.vocab',
-    # any additional iOS bundle identifiers
-  ]
+  # # 4
+  # ios_bundle_ids = [
+  #   'com.hieunguyen.eng.vocab',
+  #   # any additional iOS bundle identifiers
+  # ]
 
-  # 5
-  match_nuke({
-    type: "appstore",
-    readonly: false,
-    app_identifier: ios_bundle_ids
-  })
+  # # 5
+  # match_nuke({
+  #   type: "appstore",
+  #   readonly: false,
+  #   app_identifier: ios_bundle_ids
+  # })
 
-  # 6
-  match({
-    readonly: false,
-    app_identifier: ios_bundle_ids,
-    platform: 'ios'
-  })
+  # # 6
+  # match({
+  #   readonly: false,
+  #   app_identifier: ios_bundle_ids,
+  #   platform: 'ios'
+  # })
  end
 
 #  before_all do 
