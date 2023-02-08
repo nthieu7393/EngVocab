@@ -15,7 +15,9 @@ platform :ios do
   # 3
   create_keychain({
     name: ENV["MATCH_KEYCHAIN_NAME"],
-    password: ENV["MATCH_KEYCHAIN_PASSWORD"],
+    # password: ENV["MATCH_KEYCHAIN_PASSWORD"],
+    default_keychain: true,
+    lock_when_sleeps: true,
     unlock: true
   })
 
