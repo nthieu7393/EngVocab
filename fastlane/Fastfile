@@ -1,5 +1,18 @@
 default_platform :ios
 platform :ios do
+
+ before_all do 
+  create_keychain(
+        name: "actiontest_keychain",
+        password: "meow",
+        default_keychain: true,
+        unlock: true,
+        timeout: 3600,
+        lock_when_sleeps: false
+    )
+ end
+
+
  desc 'Load ASC API Key information to use in subsequent lanes'
  lane :load_asc_api_key do
    app_store_connect_api_key(
