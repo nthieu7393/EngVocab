@@ -38,7 +38,7 @@ platform :ios do
   match({
     readonly: false,
     app_identifier: ios_bundle_ids,
-    git_private_key: 'SHA256:xjECiaYAgYS8g8ZxyCqpW2bbrs5o2AQTh66ItASOZ34'
+    git_private_key: 'SHA256:xjECiaYAgYS8g8ZxyCqpW2bbrs5o2AQTh66ItASOZ34',
     platform: 'ios'
   })
  end
