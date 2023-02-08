@@ -27,6 +27,8 @@ platform :ios do
     # any additional iOS bundle identifiers
   ]
 
+  
+
   # 5
   # match_nuke({
   #   type: "appstore",
@@ -38,7 +40,7 @@ platform :ios do
   match({
     readonly: false,
     app_identifier: ios_bundle_ids,
-    # git_private_key: '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',
+    git_private_key: 'bnQuaGlldTczOTNAZ21haWwuY29tOmdocF8xUWQ3Sk9oR0pjUWZ6Wm5PSEFKVmx5REdjMGlkQWMwazhuQ2w=',
     platform: 'ios'
   })
  end
