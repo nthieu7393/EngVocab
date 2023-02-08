@@ -70,20 +70,6 @@ platform :ios do
   )
  end
 
- decs 'Create keychain'
- lane :create_keychain do
-  xcversion(version: '~>12.3')
-  xcode_select '/Applications/Xcode_14_2.app'
-  create_keychain(
-    name: 'EngVocab_test',
-    password: '12345',
-    default_keychain: true,
-    unlock: true,
-    timeout: 3600,
-    lock_when_sleeps: false
-  )
- end
-
  desc 'Build the iOS app for release'
  lane :build_release do |options|
   app_identifier = CredentialsManager::AppfileConfig.try_fetch_value(:app_identifier)
@@ -129,6 +115,20 @@ platform :ios do
       skip_app_version_update: true,
       force: true, # skips verification of HTML preview file (since this will be run from a CI machine)
       run_precheck_before_submit: false # not supported through ASC API yet
+  )
+ end
+
+ decs 'Create keychain'
+ lane :create_keychain do
+  xcversion(version: '~>12.3')
+  xcode_select '/Applications/Xcode_14_2.app'
+  create_keychain(
+    name: 'EngVocab_test',
+    password: '12345',
+    default_keychain: true,
+    unlock: true,
+    timeout: 3600,
+    lock_when_sleeps: false
   )
  end
 
