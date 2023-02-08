@@ -48,9 +48,9 @@ platform :ios do
  lane :prepare_signing do |options|
   app_id = CredentialsManager::AppfileConfig.try_fetch_value(:app_identifier)
   api_key = app_store_connect_api_key(
-    key_id: 'T2TM8TLBCV',
+    key_id: '97NMLZX65H',
     issuer_id: '3bfff8be-a470-48b5-9d2f-7ed90a062e21',
-    key_content: 'LS0tLS1CRUdJTiBQUklWQVRFIEtFWS0tLS0tCk1JR1RBZ0VBTUJNR0J5cUdTTTQ5QWdFR0NDcUdTTTQ5QXdFSEJIa3dkd0lCQVFRZ0k5U0dzdW93YlBUa0ZoK3QKV09OWWJYT0lyd2VMa3BKV09LNXk1TytYMXlLZ0NnWUlLb1pJemowREFRZWhSQU5DQUFUMWwwK3VRb005WXlPagptRzJ5aEtrcDBhZDFGVUxuaC9EaG83b3EveHkzQ0FDMlVrcWE2WFEvWXo5S1hETXJhQlY2d3RMSmVoejRBMVdBCit3Q2VLek1VCi0tLS0tRU5EIFBSSVZBVEUgS0VZLS0tLS0=',
+    key_content: 'LS0tLS1CRUdJTiBQUklWQVRFIEtFWS0tLS0tCk1JR1RBZ0VBTUJNR0J5cUdTTTQ5QWdFR0NDcUdTTTQ5QXdFSEJIa3dkd0lCQVFRZ2htQ2p5VTU2TnhFUFE1KysKNk1tZlBJdzJVRkl2aXQvc1EvRzk5OHhld3h5Z0NnWUlLb1pJemowREFRZWhSQU5DQUFSYzBoWFh4N0wvY1ZqTQo0N20zdjFSZGRGc1dDdUQwUndjWENxYjJqMTJUa3pWVjVVVXdvYWwydlprN0VVKysxekIrVjdFTzNUTlU2TVJBClp4Ym0wRFlMCi0tLS0tRU5EIFBSSVZBVEUgS0VZLS0tLS0=',
     is_key_content_base64: true,
     in_house: false
   )
@@ -58,7 +58,7 @@ platform :ios do
  
   cert(
       api_key: api_key,
-      keychain_path: '~/Library/Keychains/login.keychain-db' # the path to the keychain where your certificates are stored
+      keychain_path: lane_context[SharedValues::CERT_FILE_PATH] # the path to the keychain where your certificates are stored
     )
  
   # main app profile
