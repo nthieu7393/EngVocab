@@ -21,18 +21,18 @@ platform :ios do
     unlock: true
   })
 
-  # # 4
-  # ios_bundle_ids = [
-  #   'com.hieunguyen.eng.vocab',
-  #   # any additional iOS bundle identifiers
-  # ]
+  # 4
+  ios_bundle_ids = [
+    'com.hieunguyen.eng.vocab',
+    # any additional iOS bundle identifiers
+  ]
 
-  # # 5
-  # match_nuke({
-  #   type: "appstore",
-  #   readonly: false,
-  #   app_identifier: ios_bundle_ids
-  # })
+  # 5
+  match_nuke({
+    type: "appstore",
+    readonly: false,
+    app_identifier: ios_bundle_ids
+  })
 
   # # 6
   # match({
