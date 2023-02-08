@@ -49,18 +49,18 @@ platform :ios do
   api_key = lane_context[SharedValues::APP_STORE_CONNECT_API_KEY]
   profile_name = 'EngVocab App Provisioning Profile' # replace with the name of your existing profile, or define a name for the profile that fastlane will create if it’s not found
  
-  cert(
-      api_key: api_key,
-      keychain_path: lane_context[SharedValues::CERT_FILE_PATH] # the path to the keychain where your certificates are stored
-    )
+  # cert(
+  #     api_key: api_key,
+  #     keychain_path: lane_context[SharedValues::CERT_FILE_PATH] # the path to the keychain where your certificates are stored
+  #   )
  
-  # # main app profile
-  # sigh(
-  #   api_key: api_key,
-  #   app_identifier: app_id,
-  #   provisioning_name: profile_name,
-  #   force: true # always recreate this exact profile to ensure it's valid and not expired
-  # )
+  # main app profile
+  sigh(
+    api_key: api_key,
+    app_identifier: app_id,
+    provisioning_name: profile_name,
+    force: true # always recreate this exact profile to ensure it's valid and not expired
+  )
  end
 
  desc 'Build the iOS app for release'
