@@ -128,5 +128,3 @@ platform :ios do
    build_release
    upload_release
  end
-
-end
