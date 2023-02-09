@@ -29,7 +29,7 @@ platform :ios do
 
  match(
     type: "development",
-    git_basic_authorization: "bnRoaWV1NzM5MzpnaXRodWJfcGF0XzExQVlNQUpVWTA3azhFWWFqSktURHhfbE9UdTJyUW4zeHdhM2VBa0lOY1pRZGdmcDJqMElGR3Ixb0t2cGh6VjdJaU8yTkNJSU8yMFNyQmVGVm4=",
+    git_basic_authorization: "/Users/runner/work/EngVocab/EngVocab/id_rsa.pub",
 
     # readonly: false,
     # username: "itune.hasam@gmail.com",
