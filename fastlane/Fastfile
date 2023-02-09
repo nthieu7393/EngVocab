@@ -30,19 +30,19 @@ platform :ios do
 
 
   # 5
-  match_nuke({
-    type: "appstore",
-    readonly: false,
-    app_identifier: ios_bundle_ids
-  })
+  # match_nuke({
+  #   type: "appstore",
+  #   readonly: false,
+  #   app_identifier: ios_bundle_ids
+  # })
 
   # 6
-  # match({
-  #   readonly: false,
-  #   app_identifier: ios_bundle_ids,
-  #   git_private_key: 'bnQuaGlldTczOTNAZ21haWwuY29tOmdocF8xUWQ3Sk9oR0pjUWZ6Wm5PSEFKVmx5REdjMGlkQWMwazhuQ2w=',
-  #   platform: 'ios'
-  # })
+  match({
+    readonly: false,
+    app_identifier: ios_bundle_ids,
+    git_private_key: 'bnQuaGlldTczOTNAZ21haWwuY29tOmdocF8xUWQ3Sk9oR0pjUWZ6Wm5PSEFKVmx5REdjMGlkQWMwazhuQ2w=',
+    platform: 'ios'
+  })
  end
 
 #  before_all do 
