@@ -31,7 +31,7 @@ platform :ios do
     type: "development",
     readonly: false,
     username: "itune.hasam@gmail.com",
-    git_url: "git@github.com:nthieu7393/EngVocabCertificate.git",
+    git_url: "https://github.com/nthieu7393/EngVocabCertificate.git",
     storage_mode: "git",
     git_private_key: "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"
   )

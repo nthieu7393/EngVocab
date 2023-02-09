@@ -1,4 +1,4 @@
-git_url("git@github.com:nthieu7393/EngVocabCertificate.git")
+git_url("https://github.com/nthieu7393/EngVocabCertificate.git")
 
 storage_mode("git")
 
