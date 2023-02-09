@@ -15,7 +15,7 @@ platform :ios do
   # 3
   create_keychain({
     name: ENV["MATCH_KEYCHAIN_NAME"],
-    password: ENV["MATCH_KEYCHAIN_PASSWORD"],
+    password: "",
     default_keychain: true,
     lock_when_sleeps: true,
     unlock: true
@@ -33,56 +33,8 @@ platform :ios do
     # username: "itune.hasam@gmail.com",
     # git_url: "https://github.com/nthieu7393/EngVocabCertificate.git",
     # storage_mode: "git",
-    git_private_key: "-----BEGIN OPENSSH PRIVATE KEY-----
-    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
-    -----END OPENSSH PRIVATE KEY-----
-    "
+    keychain_name: ENV['MATCH_KEYCHAIN_NAME'],
+    keychain_password: ""
   )
 
   # 5s
