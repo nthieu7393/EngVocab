@@ -27,7 +27,13 @@ platform :ios do
     # any additional iOS bundle identifiers
   ]
 
-
+ match(
+    type: "development",
+    readonly: false,
+    username: "itune.hasam@gmail.com",
+    git_url: "git@github.com:nthieu7393/EngVocabCertificate.git",
+    storage_mode: "git"
+  )
 
   # 5
   # match_nuke({
@@ -37,15 +43,15 @@ platform :ios do
   # })
 
   # 6
-  match({
-    readonly: false,
-    app_identifier: ios_bundle_ids,
-    git_private_key: ENV["PRIVATE_KEY"],
-    # git_basic_authorization: Base64.strict_encode64("nt.hieu7393@gmail.com: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"),
-    # keychain_name: ENV['MATCH_KEYCHAIN_NAME'],
-    # keychain_password: ENV["MATCH_KEYCHAIN_PASSWORD"]
-    platform: 'ios'
-  })
+  # match({
+    # readonly: false,
+    # app_identifier: ios_bundle_ids,
+    # git_private_key: ENV["PRIVATE_KEY"],
+    # # git_basic_authorization: Base64.strict_encode64("nt.hieu7393@gmail.com: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"),
+    # # keychain_name: ENV['MATCH_KEYCHAIN_NAME'],
+    # # keychain_password: ENV["MATCH_KEYCHAIN_PASSWORD"]
+    # platform: 'ios'
+  # })
  end
 
 #  before_all do 
