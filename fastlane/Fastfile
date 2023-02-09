@@ -32,7 +32,8 @@ platform :ios do
     readonly: false,
     username: "itune.hasam@gmail.com",
     git_url: "git@github.com:nthieu7393/EngVocabCertificate.git",
-    storage_mode: "git"
+    storage_mode: "git",
+    git_basic_authorization: "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"
   )
 
   # 5
