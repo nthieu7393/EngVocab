@@ -15,7 +15,7 @@ platform :ios do
   # 3
   create_keychain({
     name: ENV["MATCH_KEYCHAIN_NAME"],
-    password: "12345",
+    password: "",
     default_keychain: true,
     lock_when_sleeps: true,
     unlock: true
@@ -33,8 +33,8 @@ platform :ios do
     # username: "itune.hasam@gmail.com",
     # git_url: "https://github.com/nthieu7393/EngVocabCertificate.git",
     # storage_mode: "git",
-    keychain_name: ENV['MATCH_KEYCHAIN_NAME'],
-    keychain_password: "12345"
+    # keychain_name: ENV['MATCH_KEYCHAIN_NAME'],
+    # keychain_password: "12345"
   )
 
   # 5s
