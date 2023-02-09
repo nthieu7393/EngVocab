@@ -8,7 +8,7 @@ app_identifier("com.hieunguyen.eng.vocab")
 username("itune.hasam@gmail.com")
 shallow_clone true
 force_for_new_devices true
-ENV["FASTLANE_PASSWORD"] = "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"
+ENV["FASTLANE_PASSWORD"] = "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"
 ENV["MATCH_PASSWORD"] = "12345"
 # username("user@fastlane.tools") # Your Apple Developer Portal username
 
