@@ -40,7 +40,7 @@ platform :ios do
   match({
     readonly: false,
     app_identifier: ios_bundle_ids,
-    git_basic_authorization: 'bnRoaWV1NzM5MzpnaXRodWJfcGF0XzExQVlNQUpVWTBnVkxoMVo0Y2oyd05fVElRSUZaczhOT3BqR1NFOG1XSk04MzNvemE1SkE4V0MxbGg5cGJzbzVuQVlOSEwyRUtITW1wa0tZMGk=',
+    git_basic_authorization: ENV['MATCH_GIT_BASIC_AUTHORIZATION'],
     
     # 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDa9eCKoeBB5g6O3XDceRR0oWBv+KYaEa2wyy4pcAomPy0qnnMRhrI3EODiuqjTsifBUYWomp3uFUoaBa5VMTlMcfiGlsE68RJC8HWvBfcVMaJeRHbaSrmKalWeoQE0A6f+ItVuvNQzu3jbzyLfdKM7DTavbXT3ND7GT7WT5gTd+qiytmd9+FERf5kcnUDk5CCVFiAPwKMjIvb4ADpjqSo9YF/nwB8+Fz+G+/9IqS2v5W2ecg42PfTrCfxFysmd/WWwMcflJEPOTu+eJ1jwa3FQ64nMbMqTEzo9Q1+pz5oA/1Qn75JK3mV+XU5/5z7CqKtbxlmUqjqBTz+KLXEK+nBm+KoI8GARVFlVBxM02HYf3ZntltN5ZW9/4xgeorwZ2hfzmdcFXCuWoE2saPf33VGcdkNJPZQlC35mmh0sjv2ovWk7CgZFkhhfjAYufvIWHN6cdJhxPPZCT3eixn0JpiazyT5WAfm+Ge5/hY5Fs9IZ8/xvKBiv1zwZ/Ywdl3vgJFPb2oYfZ6PLh+SBaDM1dWW882Y/2b4NSuoO8IO8n71IF3OIkWdQWKRVdYmr4Dx1IvJ4XMwyFP96xQ9lIOjUnIdpcnzZFO/5W60ImGjyGEWMFHZ7qRx6juIAKegKFBpwXE27ZFjn3SRKGACBU5Z3pTAX867dISCVECs7l6G67QJMuw== nt.hieu7393@gmail.com
     # ',
