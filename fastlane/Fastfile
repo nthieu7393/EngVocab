@@ -29,14 +29,14 @@ platform :ios do
 
  match(
     type: "development",
-    readonly: false,
-    username: "itune.hasam@gmail.com",
-    git_url: "https://github.com/nthieu7393/EngVocabCertificate.git",
-    storage_mode: "git",
-    git_private_key: "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"
+    # readonly: false,
+    # username: "itune.hasam@gmail.com",
+    # git_url: "https://github.com/nthieu7393/EngVocabCertificate.git",
+    # storage_mode: "git",
+    # git_basic_authorization: "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"
   )
 
-  # 5
+  # 5s
   # match_nuke({
   #   type: "appstore",
   #   readonly: false,
