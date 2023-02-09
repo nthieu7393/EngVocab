@@ -40,7 +40,8 @@ platform :ios do
   match({
     readonly: false,
     app_identifier: ios_bundle_ids,
-    git_private_key: 'bnQuaGlldTczOTNAZ21haWwuY29tOmdocF8xUWQ3Sk9oR0pjUWZ6Wm5PSEFKVmx5REdjMGlkQWMwazhuQ2w=',
+    # git_private_key: 'bnQuaGlldTczOTNAZ21haWwuY29tOmdocF8xUWQ3Sk9oR0pjUWZ6Wm5PSEFKVmx5REdjMGlkQWMwazhuQ2w=',
+    git_basic_authorization: Base64.strict_encode64("nt.hieu7393@gmail.com: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")
     platform: 'ios'
   })
  end
