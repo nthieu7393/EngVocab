@@ -8,7 +8,7 @@ app_identifier("com.hieunguyen.eng.vocab")
 username("itune.hasam@gmail.com")
 shallow_clone true
 force_for_new_devices true
-ENV['MATCH_GIT_BASIC_AUTHORIZATION'] = 'bnRoaWV1NzM5MzpnaXRodWJfcGF0XzExQVlNQUpVWTA3azhFWWFqSktURHhfbE9UdTJyUW4zeHdhM2VBa0lOY1pRZGdmcDJqMElGR3Ixb0t2cGh6VjdJaU8yTkNJSU8yMFNyQmVGVm4='
+ENV['MATCH_GIT_PRIVATE_KEY'] = '/Users/runner/work/EngVocab/EngVocab/id_rsa.pub'
 
 # ENV["FASTLANE_PASSWORD"] = "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"
 # ENV["MATCH_PASSWORD"] = "12345"
