@@ -29,7 +29,6 @@ platform :ios do
 
  match(
     type: "development",
-    git_basic_authorization: "/Users/runner/work/EngVocab/EngVocab/id_rsa.pub",
 
     # readonly: false,
     # username: "itune.hasam@gmail.com",
