@@ -36,9 +36,9 @@ platform :ios do
 
   # 6
   match({
-    type: "development",
-    readonly: false,
-    app_identifier: ios_bundle_ids,
+    type: "development"
+    # readonly: false,
+    # app_identifier: ios_bundle_ids,
     # git_basic_authorization: Base64.strict_encode64("nt.hieu7393@gmail.com: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"),
     # keychain_name: ENV['MATCH_KEYCHAIN_NAME'],
     # keychain_password: ENV["MATCH_KEYCHAIN_PASSWORD"]
