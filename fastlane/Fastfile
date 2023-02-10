@@ -46,9 +46,30 @@ platform :ios do
   })
  end
 
+ #  desc 'Load ASC API Key information to use in subsequent lanes'
+ lane :load_asc_api_key do
+   app_store_connect_api_key(
+     key_id: 'KFM853VPH8',
+     issuer_id: '3bfff8be-a470-48b5-9d2f-7ed90a062e21',
+     key_content: 'LS0tLS1CRUdJTiBQUklWQVRFIEtFWS0tLS0tCk1JR1RBZ0VBTUJNR0J5cUdTTTQ5QWdFR0NDcUdTTTQ5QXdFSEJIa3dkd0lCQVFRZ1lqMllLd3BTNHR0SDA2WHgKaHgzM1pNMXltMXJqaHRET0tpMHVHeFFlR3oyZ0NnWUlLb1pJemowREFRZWhSQU5DQUFUZGs4Tk9ha0JHTnMwOApYKy9pWnIyVnVIN1BqZmttZVVOaHpsWWNUL2FseXBBTEMxeTd3aVc5cE1WaVhtMEVGVTlrK2VFZ1g0SDhtVm9xCnpTWjRxNkRNCi0tLS0tRU5EIFBSSVZBVEUgS0VZLS0tLS0=',
+     is_key_content_base64: true,
+     in_house: false
+   )
+ end
+
  desc 'Upload to TestFlight / ASC'
  lane :upload_release do
-  api_key = lane_context[SharedValues::APP_STORE_CONNECT_API_KEY]
+  api_key = app_store_connect_api_key(
+    key_id: 'KFM853VPH8',
+    issuer_id: '3bfff8be-a470-48b5-9d2f-7ed90a062e21',
+    key_content: 'LS0tLS1CRUdJTiBQUklWQVRFIEtFWS0tLS0tCk1JR1RBZ0VBTUJNR0J5cUdTTTQ5QWdFR0NDcUdTTTQ5QXdFSEJIa3dkd0lCQVFRZ1lqMllLd3BTNHR0SDA2WHgKaHgzM1pNMXltMXJqaHRET0tpMHVHeFFlR3oyZ0NnWUlLb1pJemowREFRZWhSQU5DQUFUZGs4Tk9ha0JHTnMwOApYKy9pWnIyVnVIN1BqZmttZVVOaHpsWWNUL2FseXBBTEMxeTd3aVc5cE1WaVhtMEVGVTlrK2VFZ1g0SDhtVm9xCnpTWjRxNkRNCi0tLS0tRU5EIFBSSVZBVEUgS0VZLS0tLS0=',
+    is_key_content_base64: true,
+    in_house: false
+  )
+  
+  
+  # lane_context[SharedValues::APP_STORE_CONNECT_API_KEY]
+  puts api_key
  
   deliver(
       api_key: api_key,
