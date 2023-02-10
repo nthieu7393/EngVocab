@@ -223,7 +223,7 @@ platform :ios do
     desc "Push a new beta build to TestFlight"
     lane :beta do
         setup_ci
-        match(type: "development")
+        # match(type: "development")
         build_app(workspace: "EngVocab.xcworkspace", scheme: "EngVocab") # Change name of workspace
         upload_to_testflight(changelog: ENV["CHANGELOG"] || "No changelog provided")
     end
