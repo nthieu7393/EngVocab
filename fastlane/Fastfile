@@ -27,34 +27,36 @@ platform :ios do
     # any additional iOS bundle identifiers
   ]
 
- match(
-    type: "development",
-
-    # readonly: false,
-    # username: "itune.hasam@gmail.com",
-    # git_url: "https://github.com/nthieu7393/EngVocabCertificate.git",
-    # storage_mode: "git",
-    # keychain_name: ENV['MATCH_KEYCHAIN_NAME'],
-    # keychain_password: "12345"
-  )
-
   # 5s
-  # match_nuke({
-  #   type: "appstore",
-  #   readonly: false,
-  #   app_identifier: ios_bundle_ids
-  # })
+  match_nuke({
+    type: "appstore",
+    readonly: false,
+    app_identifier: ios_bundle_ids
+  })
 
   # 6
-  # match({
-    # readonly: false,
-    # app_identifier: ios_bundle_ids,
-    # git_private_key: ENV["PRIVATE_KEY"],
-    # # git_basic_authorization: Base64.strict_encode64("nt.hieu7393@gmail.com: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"),
-    # # keychain_name: ENV['MATCH_KEYCHAIN_NAME'],
-    # # keychain_password: ENV["MATCH_KEYCHAIN_PASSWORD"]
-    # platform: 'ios'
-  # })
+  match({
+    readonly: true,
+    app_identifier: ios_bundle_ids,
+    # git_basic_authorization: Base64.strict_encode64("nt.hieu7393@gmail.com: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"),
+    # keychain_name: ENV['MATCH_KEYCHAIN_NAME'],
+    # keychain_password: ENV["MATCH_KEYCHAIN_PASSWORD"]
+    platform: 'ios'
+  })
+ end
+
+ desc 'Upload to TestFlight / ASC'
+ lane :upload_release do
+  api_key = lane_context[SharedValues::APP_STORE_CONNECT_API_KEY]
+ 
+  deliver(
+      api_key: api_key,
+      skip_screenshots: true,
+      skip_metadata: true,
+      skip_app_version_update: true,
+      force: true, # skips verification of HTML preview file (since this will be run from a CI machine)
+      run_precheck_before_submit: false # not supported through ASC API yet
+  )
  end
 
 #  before_all do 
