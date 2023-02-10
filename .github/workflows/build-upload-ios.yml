@@ -46,7 +46,7 @@ jobs:
           export LC_ALL=en_US.UTF-8
           export LANG=en_US.UTF-8
           bundle exec fastlane set_release_version 
-          # bundle exec fastlane set_release_version
+          bundle exec fastlane build_testflight
         env:
           MATCH_PASSWORD: 12345 #${{ secrets.MATCH_PASSWORD }}
           FASTLANE_USER: itune.hasam@gmail.com #${{ secrets.FASTLANE_USER }}
