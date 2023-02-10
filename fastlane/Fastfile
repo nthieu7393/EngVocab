@@ -213,4 +213,33 @@ platform :ios do
   #  build_release
   #  upload_release
  end
+
+
+
+ desc "Run tests"
+    lane :tests do
+        run_tests(scheme: "EngVocabTests")
+    end
+    desc "Push a new beta build to TestFlight"
+    lane :beta do
+        setup_ci
+        match(type: "development", readonly: is_ci)
+        build_app(workspace: "EngVocab.xcworkspace", scheme: "EngVocab") # Change name of workspace
+        upload_to_testflight(changelog: ENV["CHANGELOG"] || "No changelog provided")
+    end
+    desc "Sets the version of the bundle to a RELEASE_VERSION passed in as an environment variable"
+    lane :set_release_version do
+        version = ENV["RELEASE_VERSION"]
+        if version 
+            UI.message("Setting version to #{version}")
+            increment_version_number(version_number: version)
+            increment_build_number(build_number: Time.now.to_i)
+        else
+            UI.user_error!("Environment variable RELEASE_VERSION not set")
+        end
+    end
+
+
+
+
 end
