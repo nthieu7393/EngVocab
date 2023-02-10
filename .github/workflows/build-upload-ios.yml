@@ -41,11 +41,22 @@ jobs:
           p12-file-base64: ${{ secrets.IOS_DIST_SIGNING_KEY }}
           p12-password: ${{ secrets.IOS_DIST_SIGNING_KEY_PASSWORD }}
 
-      - name: Build & upload iOS binary
-        run: bundle exec fastlane ios beta
+      - name: Build & Distribute to Testflight
+        run: |
+          export LC_ALL=en_US.UTF-8
+          export LANG=en_US.UTF-8
+          bundle exec fastlane set_release_version 
+          # bundle exec fastlane set_release_version
         env:
-          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
-          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          MATCH_PASSWORD: 12345 #${{ secrets.MATCH_PASSWORD }}
+          FASTLANE_USER: itune.hasam@gmail.com #${{ secrets.FASTLANE_USER }}
+          FASTLANE_PASSWORD: 6@hsu307^ayehnmoY #${{ secrets.FASTLANE_PASSWORD }}
+          FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: "dins-mvhe-ruxe-bekv" #${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
+          FASTLANE_SESSION: '---\n- !ruby/object:HTTP::Cookie\n  name: myacinfo\n  value: DAWTKNV323952cf8084a204fb20ab2508441a07d02d3f2774c26b3aaa445a5ef506980ae4117e2c9c613ac30831325570a013740a028f2c22eac7796f4679c0dbee2bbd6ec3ee5c6e6e0f44cd4579a51c12a64120ad08b88b61f9b919ae1eb8b41ece621937bdfc7283d15c7ec132d79fce56f4f30ce3b48b95ad2c12d16eb9b67402c1872d9f9da89cdaeca45a609406229e94ced0bf53c96eff383c1e9ba0355e9658837302dba1433c8763f40cd0412314137bb8390b6f395d497de9d79f448738668025a5a524d64f49ae9361d714bd4daad228bdccf1643f6e1c24de592eff70764b681bb8a57fcca5533c03145b866cd20a937452568e95571ac2dc57b8ab5f93787082bd61b7c176bcada71ad3dc4fcd3a2170252dcb7c66b1856c118d9683fed1aa78ed958e49d7e3aebf02cab26c45b14d48712c85d83f5f030d005f666f0de91250ce02f58221173b44c6a7e445505a2f12ac6f877241f79d21f015d836b392e95393bfb8dce64b72646b35422f47c6559a94a786b70ac86595895f8bc2a4ac21ef86d7c3612e466ec15ce4d5306259ea7193935cca19910c15c5744016c140017a6db3dd1ba64a25be32888fe45a6ad112a57bb82d798279e1df29741934bdabd73ef08dd7bac6e33bbaf069b23556aa24201003792c5ad78535b2a1ee07364089e030cb2e6c8cbedc24d4f0f572c685aaa49810bad265a863221d2a3e4465184585a47V3\n  domain: apple.com\n  for_domain: true\n  path: "/"\n  secure: true\n  httponly: true\n  expires: \n  max_age: \n  created_at: 2023-02-10 17:56:21.649697000 +07:00\n  accessed_at: 2023-02-10 17:56:21.651788000 +07:00\n- !ruby/object:HTTP::Cookie\n  name: DES5868d2f2d188722318a4cd199672ccc05\n  value: HSARMTKNSRVXWFlavnhOYzGYhdIY408A6hlhm0qZIWqWFyV6l/8AW9gnCJtGbjnX72ODaAEBPPphWEXIDEf89gCAD9pOpG/OtXNa+LyVwSUHcjRBv5NOoJ+DgrKZlozcOvVVDOGv3bj/mwCmPSvP2F2c5T3qXiRAatQwD9n/wU1GaxVJ2rKxyqGiftBFISHkNup1outtwT/9ATe97H70/hxJ7qQTJHrFdndmBA4A8bU=SRVX\n  domain: idmsa.apple.com\n  for_domain: true\n  path: "/"\n  secure: true\n  httponly: true\n  expires: \n  max_age: 2592000\n  created_at: 2023-02-05 01:45:38.377871000 +07:00\n  accessed_at: 2023-02-10 17:56:20.369549000 +07:00\n- !ruby/object:HTTP::Cookie\n  name: dqsid\n  value: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NzYwMjY1ODIsImp0aSI6InZpOElVcWQtM3RUWUNsaExYb3Y1QmcifQ.F8OYYETWsct61UcFBBllUDJTNiiZGAwO4KG1b-tdLkY\n  domain: appstoreconnect.apple.com\n  for_domain: false\n  path: "/"\n  secure: true\n  httponly: true\n  expires: \n  max_age: 1800\n  created_at: &1 2023-02-10 17:56:22.694791000 +07:00\n  accessed_at: *1\n'
+
+          #${{ secrets.FASTLANE_SESSION }}
+          RELEASE_VERSION: ${{ github.event.release.tag_name }}
+          CHANGELOG: "fowkfok"
 
       - name: Upload app-store ipa and dsyms to artifacts
         uses: actions/upload-artifact@v2
